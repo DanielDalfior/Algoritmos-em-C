@@ -4,25 +4,18 @@
 
 int main()
 {
-    float preco, reajuste;
-    float totalBruto, totalLiquido, desconto;
-    int quantidade;
+    float x1, y1, x2, y2, d;
 
-    printf("MERCADORIA: Dados de entrada\n");
-    printf("Preco (R$): "); scanf("%f", &preco);
-    printf("Quantidade (Uni.): "); scanf("%i", &quantidade);
-    printf("Reajuste (%%): "); scanf("%f", &reajuste);
+    printf("ALGORITMO: DISTANCIA ENTRE PONTOS P(x1,y1) e Q(x2,y2): \n");
+    printf("Dados de entrada\n");
+    printf("Coordenada x1 - Ponto P: "); scanf("%f", &x1);
+    printf("Coordenada y1 - Ponto P: "); scanf("%f", &y1);
+    printf("Coordenada x2 - Ponto Q: "); scanf("%f", &x2);
+    printf("Coordenada y2 - Ponto Q: "); scanf("%f", &y2);
 
-    totalBruto = preco * quantidade;
-    desconto = reajuste / 100 * totalBruto;
-    totalLiquido = totalBruto - desconto;
+    d = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 
-    printf("Total a pagar (sem desconto): R$ %.2f\n", totalBruto);
-    printf("Total a pagar (com desconto: %.2f %%): R$  %.2f\n", reajuste, totalLiquido);
-    printf("Desconto (%.2f %%): R$ %.2f\n", reajuste, desconto);
-
-
-
+    printf("Distancia entre pontos P (%.2f, %.2f) e Q (%.2f, %.2f): %.2f", x1, y1, x2, y2, d);
 
     return 0;
 }
